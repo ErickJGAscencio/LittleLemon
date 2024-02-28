@@ -15,7 +15,7 @@ def msg(request):
   return response({"message":"This view is protected"})
 
 class UserViewSet(viewsets.ModelViewSet):
-  permission_classes = [permissions.IsAuthenticated] 
+  # permission_classes = [permissions.IsAuthenticated] 
   queryset = User.objects.all()
   serializer_class = UserSerializer
   
