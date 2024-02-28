@@ -5,8 +5,9 @@ from .api import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'menu', views.MenuItemsViewSet)
-router.register(r'booking', views.BookingViewSet)
+router.register(r'tables', views.BookingViewSet)
 
 urlpatterns = [
   path('', include(router.urls)),
+  path('booking/', include(router.urls)),
 ]
