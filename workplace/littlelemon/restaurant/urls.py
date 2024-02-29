@@ -12,7 +12,6 @@ router.register(r'users', views.UserViewSet)
 
 # RECORDAR CAMBIAR LAS RUTAS MANUALMENTE Y EN LOS ARCHIVOS VIEWS, CAMBIAR LA PROPIEDAD QUE HEREDAN
 urlpatterns = [
-  path('', include(router.urls)),
   path('', views.index, name='index'),
   path('booking/', include(router.urls)),
   path('message/', views.msg),
