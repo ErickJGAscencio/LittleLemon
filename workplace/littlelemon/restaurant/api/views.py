@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import generics
 from .serializers import MenuSerializer, MenuItemSerializer, UserSerializer, BookingSerializer
@@ -13,6 +14,9 @@ from rest_framework.decorators import api_view, permission_classes, authenticati
 @authentication_classes([authentication.TokenAuthentication])
 def msg(request):
   return response({"message":"This view is protected"})
+
+def index(request):
+    return render(request, 'index.html', {})
 
 class UserViewSet(viewsets.ModelViewSet):
   # permission_classes = [permissions.IsAuthenticated] 
